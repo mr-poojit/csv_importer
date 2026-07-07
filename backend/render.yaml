@@ -3,6 +3,7 @@ services:
     name: csv-importer-backend
     env: node
     plan: free
+    rootDir: backend
     buildCommand: npm install
     startCommand: npm start
     envVars:

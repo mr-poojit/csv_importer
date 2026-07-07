@@ -485,7 +485,7 @@ a {
 .table-container {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
-  overflow: hidden;
+  overflow: visible;
   background: var(--bg-card);
 }
 
@@ -517,7 +517,6 @@ a {
 
 .table-scroll-wrapper {
   overflow: auto;
-  max-height: 420px;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }

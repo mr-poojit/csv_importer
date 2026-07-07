@@ -160,8 +160,8 @@ export default function ImportResult({ totalImported, totalSkipped, records }) {
             <span className="table-count">{records.length} imported</span>
           </div>
 
-          <div className="table-scroll-wrapper" style={{ overflowX: 'auto', overflowY: 'hidden' }} ref={containerRef}>
-            <div style={{ width: tableWidth }}>
+          <div className="table-scroll-wrapper" style={{ overflowX: 'auto', overflowY: 'visible' }} ref={containerRef}>
+            <div style={{ width: tableWidth, paddingBottom: 8 }}>
               {/* Header */}
               <div style={{ display: 'flex', background: 'var(--bg-secondary)', borderBottom: '1px solid var(--border)', fontWeight: 600, fontSize: '12px', textTransform: 'uppercase', color: 'var(--text-secondary)', padding: '12px 0' }}>
                 <div className="row-num" style={{ minWidth: 48, padding: '0 8px', textAlign: 'center' }}>#</div>
@@ -179,7 +179,7 @@ export default function ImportResult({ totalImported, totalSkipped, records }) {
               {listWidth > 0 && (
                 <List
                   ref={listRef}
-                  height={400}
+                  height={Math.min(records.length * 44, 400)}
                   itemCount={records.length}
                   itemSize={44}
                   width={tableWidth}
